@@ -1,0 +1,16 @@
+# IntelliJ
+.idea
+*.iml
+
+# Flutter
+hello-grpc-web/.dart_tool
+hello-grpc-web/.flutter-plugins
+hello-grpc-web/.flutter-plugins-dependencies
+hello-grpc-web/.packages
+
+# Dart
+hello-grpc-server/.dart_tool
+hello-grpc-server/.packages
+
+# Build
+hello-grpc-web/build

@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.protoc.grpc";
+option java_outer_classname = "HelloChatProto";
+option objc_class_prefix = "HLW";
+
+package hellochat;
+
+service User {
+  rpc Login (LoginRequest) returns (LoginReply) {}
+}
+
+service Chat {
+  rpc Read (ReadRequest) returns (stream ReadReply) {}
+  rpc Send (SendRequest) returns (SendReply) {}
+}
+
+message LoginRequest {
+  string name = 1;
+}
+
+message LoginReply {
+  bool success = 1;
+}
+
+message ReadRequest {
+}
+
+message ReadReply {
+  string name = 1;
+  string message = 2;
+}
+
+message SendRequest {
+  string name = 1;
+  string message = 2;
+}
+
+message SendReply {
+  bool success = 1;
+}

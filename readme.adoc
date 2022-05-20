@@ -1,0 +1,32 @@
+# POC gRPC Web Chat
+
+### Protobuf
+
+----
+brew install protobuf
+protoc --version
+----
+
+Generation of the Stub classes:
+
+----
+protoc --dart_out=grpc:./lib/protos -Iprotos protos/hellochat.proto
+----
+
+### Envoy
+
+For using gRPC on WEB, we need an Proxy between. For this example: envoy, alternatives like traefik ...
+
+https://www.envoyproxy.io/docs/envoy/latest/start/install
+
+----
+brew install envoy
+----
+
+And starting the Proxy:
+
+----
+envoy -c hello-envoy.yaml
+----
+
+Open Point: Compiling to IOS-iPhone to check, due: import 'dart:html';

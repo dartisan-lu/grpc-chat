@@ -1,0 +1,3 @@
+hello-grpc-web/android/* linguist-vendored
+hello-grpc-web/ios/* linguist-vendored
+hello-grpc-web/web/* linguist-vendored
